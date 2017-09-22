@@ -1,0 +1,57 @@
+/*html {
+	width: 100vw;
+	height: 100vh;
+}*/
+
+h2 {
+	padding: 15px 45px;
+	max-width: 400px;
+	border: 2px dashed DarkTurquoise;
+	border-radius: 15px;
+	margin-left: 30vw;
+}
+
+h2,
+p {
+	text-align: center;
+}
+
+p {
+	font-size: 30px;
+}
+
+input,
+select {
+	margin-left: 5%;
+}
+
+#container button {
+	outline: 0;
+	position: absolute;
+	top: 30vh;
+	left: 62vw;
+	font-size: 15px;
+	padding: 15px 45px;
+	border-color: aqua;
+	border-radius: 15px;
+	background-color: #fff;
+}
+
+#container button:focus {
+	outline: 0;
+}
+
+#container {
+	background-image: url(/img/img_question/kristaly.png);
+	min-height: 80vh;
+	font-size: 20px;
+}
+
+#container div {
+	margin-left: 30vw;
+	display: none;
+}
+
+#container div:nth-child(2) {
+	display: block;
+}
