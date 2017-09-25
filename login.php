@@ -1,6 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+    require "db.php";
+	$data = $_POST;
+	if( isset($data['do_login']) ){
+		$errors = array();
+		$user = R::findOne('users','login = ?',array($data['login']));
+		if( $user ){ 
+			//login is
+			if( password_verify($data['password'],$user->password) ){
+				//зашли
+				$_SESSION['logged_user'] = $user;
+				echo '<div style="color:green;"> Вы вошли</div> <hr>';
+				header('Location: /project_startup/startUp');
 
+			}else{
+				$errors[] = "Неправильно введет пароль";
+			}
+		}else{
+			$errors[] = 'Пользователя не существует';
+		}
+
+		if( !empty($errors) ){
+			echo '<div style="color:red;">' . array_shift($errors) . '</div> <hr>';
+		}
+
+	}
+
+
+?>
+<html lang="ru-en">
 <head>
 	<meta charset="UTF-8">
 	<title>Start page</title>
@@ -20,8 +47,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
 <body>
+
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-6">
@@ -39,13 +66,29 @@
 				</form>
 			</div>
 		</div>
+		<a href="login.php">ВХОД</a><!-- Вход здесь!-->
+		<a href="signUp.php">Регистрация</a> <!-- Регистрация тута!-->
+		<a href="logOut.php">Выйти в окно</a> <!-- Выход из сайта !-->
 	</header>
 
-	<main>
-		<a href="html/question.html" class="text-center">
-			<h1>go to a question</h1>
-		</a>
-	</main>
+	<main><form action="login.php" method="POST"> 
+<p>
+  	<p><strong>Введите логин или Email </strong></p>
+  	<input type='text' name="login">
+  </p>
+ 
+  <p>
+  	<p><strong>Введите пароль </strong></p>
+  	<input type='password' name="password">
+  </p>
+   <p>
+  	<button type="submit" name="do_login"> Войти </button>
+  </p>
+
+  
+
+
+</form></main>
 
 	<footer class="text-center">
 		<a href="#"><i class="fa fa-facebook"></i></a>
