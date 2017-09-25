@@ -20,14 +20,15 @@
 	html {
 		font-size: 9px;
 	}
-	
 }
 
 
 /*mobile*/
 
 @media (max-width:767px) {
-	
+	.container {
+		min-width: 100%;
+	}
 }
 
 @media (max-width:575px) {
@@ -36,6 +37,4 @@
 	}
 }
 
-@media (max-width:374px) {
-
-}
+@media (max-width:374px) {}

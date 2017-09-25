@@ -3,3 +3,27 @@
 	src: url('../fonts/glyphicons-halflings-regular.eot');
 	src: url('../fonts/glyphicons-halflings-regular.eot') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphiconshalflingsregular') format('svg');
 }
+
+@font-face {
+	font-family: 'Satellite';
+	src: url('../fonts/Satellite.eot');
+	src: url('../fonts/Satellite.eot') format('embedded-opentype'), url('../fonts/Satellite.woff2') format('woff2'), url('../fonts/Satellite.woff') format('woff'), url('../fonts/Satellite.ttf') format('truetype'), url('../fonts/Satellite.svg#Satellite') format('svg');
+}
+
+@font-face {
+	font-family: 'Flatform_Light';
+	src: url('../fonts/Flatform_Light.eot');
+	src: url('../fonts/Flatform_Light.eot') format('embedded-opentype'), url('../fonts/Flatform_Light.woff2') format('woff2'), url('../fonts/Flatform_Light.woff') format('woff'), url('../fonts/Flatform_Light.ttf') format('truetype'), url('../fonts/Flatform_Light.svg#Flatform_Light') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansRegular';
+	src: url('../fonts/OpenSansRegular.eot');
+	src: url('../fonts/OpenSansRegular.eot') format('embedded-opentype'), url('../fonts/OpenSansRegular.woff2') format('woff2'), url('../fonts/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular.ttf') format('truetype'), url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url('../fonts/OpenSansBold.eot');
+	src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'), url('../fonts/OpenSansBold.woff2') format('woff2'), url('../fonts/OpenSansBold.woff') format('woff'), url('../fonts/OpenSansBold.ttf') format('truetype'), url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
