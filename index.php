@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,7 +23,12 @@
 
 <body>
 
-
+<?php
+    require "db.php";
+    if(isset($_SESSION['logged_user'])){
+	echo "Авторизован. Привет " , $_SESSION['logged_user']->login , "!";
+	}
+   ?>
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-2">
