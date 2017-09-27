@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,18 +23,13 @@
 
 <body>
 
-<?php
-    require "db.php";
-    if(isset($_SESSION['logged_user'])){
-	echo "Авторизован. Привет " , $_SESSION['logged_user']->login , "!";
-	}
-   ?>
+
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-2">
 				<h1>Some logo</h1>
 			</div>
-			<nav class="col-lg-4 col-lg-offset-6 col-sm-10 ">
+			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
 				<a href="html/question.html">
 				LogIn
 				</a>
@@ -44,25 +39,29 @@
 				<a href="html/question.html">
 				Questions
 				</a>
+				<a href="login.php">ВХОД</a>
+				<!-- Вход здесь!-->
+				<a href="signUp.php">Регистрация</a>
+				<!-- Регистрация тута!-->
+				<a href="logOut.php">Прыгнуть из окна</a>
+				<!-- Выход из сайта !-->
 			</nav>
-			<!--		lalalalal/-->
+		</div>
+		</div>
 
-		</div>
-		</div>
-		<a href="login.php">ВХОД</a>
-		<!-- Вход здесь!-->
-		<a href="signUp.php">Регистрация</a>
-		<!-- Регистрация тута!-->
-		<a href="logOut.php">Выйти в окно</a>
-		<!-- Выход из сайта !-->
 	</header>
 
 
 	<main>
 		<div id="particles-js">
-			<img src="https://cdn.pixabay.com/photo/2017/07/31/11/51/laptop-2557615_960_720.jpg">
-			<img src="https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_960_720.jpg" class="display_none">
-			<img src="https://cdn.pixabay.com/photo/2017/08/29/21/17/notebook-2694903_960_720.jpg" class="display_none">
+			<img src="img/img_homepage/t1.jpg">
+			<img src="img/img_homepage/t2.jpg" class="display_none">
+			<img src="img/img_homepage/t3.jpg" class="display_none">
+			<img src="img/img_homepage/t4.jpg" class="display_none">
+			<img src="img/img_homepage/t5.jpg" class="display_none">
+			<img src="img/img_homepage/t6.jpg" class="display_none">
+			<img src="img/img_homepage/t7.jpg" class="display_none">
+
 		</div>
 		<div class="main_block" id="front">
 			<h1>Lorem ipsum dolor sit amet.</h1>

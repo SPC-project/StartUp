@@ -51,9 +51,9 @@ main .main_block {
 main #front p {
 	font-size: 16px;
 	font-family: "OpenSansBold";
-	color: #fff;
+	color: #000;
 	margin-bottom: 40px;
-	text-shadow: 0px 0px 50px #000, 0px 0px 50px #000, 0px 0px 50px #000;
+	text-shadow: 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff;
 }
 
 main #front h1 {
@@ -61,9 +61,9 @@ main #front h1 {
 	font-size: 70px;
 	font-family: "Satellite";
 	font-weight: bold;
-	color: #fff;
+	color: #000;
 	margin: 0;
-	text-shadow: 0px 0px 50px #000, 0px 0px 50px #000, 0px 0px 50px #000;
+	text-shadow: 0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff;
 }
 
 .a_btn:hover {
@@ -90,6 +90,7 @@ main #front h1 {
 	z-index: 0;
 	position: absolute;
 	width: 100%;
+	overflow: hidden;
 	height: 100%;
 	/*background-repeat: no-repeat;
 	background-size: cover;*/
@@ -99,14 +100,15 @@ main #front h1 {
 	background-position: top;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-color: black;
+	background-color: white;
 }
 
 #particles-js img {
-	height: 100%;
+	/*height: 100%;*/
+	min-height: 85vh;
 	width: 100%;
 	z-index: -2;
-	opacity: 0.5;
+	opacity: 0.9;
 	position: absolute;
 	-webkit-animation: fadein 4s;
 	-moz-animation: fadein 4s;
@@ -120,10 +122,10 @@ main #front h1 {
 		opacity: 0;
 	}
 	15% {
-		opacity: 0.4;
+		opacity: 0.9;
 	}
 	85% {
-		opacity: 0.5;
+		opacity: 1;
 	}
 	100% {
 		opacity: 0;
@@ -156,7 +158,8 @@ main #front h1 {
 	font-size: 100px;
 	z-index: 1;
 	opacity: 1;
-	color: white;
+	/*color: white;*/
+	color: black;
 }
 
 main {
