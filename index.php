@@ -30,11 +30,17 @@
 				<h1>Some logo</h1>
 			</div>
 			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
+			<!--Тоже самое (почти) на чистом html 
+			<a href='login.php'>LogIn</a>
+			<a href="signUp.php">SignIn</a>
+			<a href="html/question.html">Questions</a>
+			-->
 				<!--КОД PHP который взаимодействует с html. Пожалуйста запусти меня на локальном сервере-->
 					<?php
     					require "db.php"; // Подключаем соеденение с БД.
     					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
 							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; // Строчка где показывается login пользователя
+							echo '<a href="html/question.html">Questions</a>';
 							echo '<a href="logOut.php">Прыгнуть из окна</a>';//ссылка для выхода
 						}else{
 							echo "<a href='login.php'>LogIn</a>";
