@@ -1,5 +1,7 @@
 <?php
-	require "rb-mysql.php";
-	R::setup( 'mysql:host=localhost;dbname=startup','root', '111111' ); //for both mysql or mariaDB
-	session_start();
+	//Хочу сразу заметить что этот файлик вызывается везде где используется БД. 
+	//Это сделано для удобства и уменьшение кода в остальных файлах
+	require "rb-mysql.php"; //Подключаем библиотеку redbeans
+	R::setup( 'mysql:host=localhost;dbname=startup','root', '111111' ); //Создание подключения с базой данных. 1.Хост. 2.Название базы данных 3. Имя пользователя 4.Пароль
+	session_start(); //Старт работы с базой данных
 ?>

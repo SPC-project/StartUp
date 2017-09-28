@@ -30,21 +30,21 @@
 				<h1>Some logo</h1>
 			</div>
 			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
-				<a href="html/question.html">
-				LogIn
-				</a>
-				<a href="html/question.html">
-				SignIn
-				</a>
-				<a href="html/question.html">
-				Questions
-				</a>
-				<a href="login.php">ВХОД</a>
-				<!-- Вход здесь!-->
-				<a href="signUp.php">Регистрация</a>
-				<!-- Регистрация тута!-->
-				<a href="logOut.php">Прыгнуть из окна</a>
-				<!-- Выход из сайта !-->
+				<!--КОД PHP который взаимодействует с html. Пожалуйста запусти меня на локальном сервере-->
+					<?php
+    					require "db.php"; // Подключаем соеденение с БД.
+    					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
+							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; // Строчка где показывается login пользователя
+							echo '<a href="logOut.php">Прыгнуть из окна</a>';//ссылка для выхода
+						}else{
+							echo "<a href='login.php'>LogIn</a>";
+							// Вход здесь!
+							echo '<a href="signUp.php">SignIn</a>';
+							// Регистрация тута!
+							echo '<a href="html/question.html">Questions</a>';
+						}
+					?> 
+					<!--КОНЕЦ кода PHP -->
 			</nav>
 		</div>
 		</div>

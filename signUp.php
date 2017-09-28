@@ -1,9 +1,9 @@
 
 <?php
-    require "db.php";
-	$data = $_POST;
-	if( isset($data['do_signup']) ){
-		$errors = array();
+    require "db.php"; // Подключение к БД
+	$data = $_POST; // Забираем из запроса данные
+	if( isset($data['do_signup']) ){//Проверяем есть ли что то
+		$errors = array(); // массив ошибок
 
 		if( trim($data['login'] == '') ){
 			$errors[] = "Введите логин!";
@@ -20,6 +20,8 @@
 		if( $data['password_2'] != $data['password'] ){
 			$errors[] = 'Повторный пароль не верен!';
 		}
+		// ^ 4 проверки на ввод данных
+		// Ниже 2 Проверки на совпадение логина и майле
 
 		if ( R::count('users', "login = ?",array($data['login'])) > 0){
 			$errors[] = 'Пользователь с таким логином существует';
@@ -28,19 +30,21 @@
 		if ( R::count('users', "email = ?",array($data['email'])) > 0){
 			$errors[] = 'Пользователь с таким Email существует';
 		}
+
 		if( empty($errors) ){
 			// Все хорошо регаем
-		 	$user = R::dispense('users');
-		 	$user->login = $data['login'];
-		 	$user->email = $data['email'];
-		 	$user->password = password_hash($data['password'], PASSWORD_DEFAULT);
-			 R::store($user);
-			 $_SESSION['logged_user'] = $user;
-		 	echo "<div style='color:green;'>Регистрация успешна</div><br>";
+		 	$user = R::dispense('users'); // функция подключения кк таблице юзерс. Если ее нету то она  тут и создается
+		 	$user->login = $data['login']; //Добавляем поля
+		 	$user->email = $data['email']; //add поля
+		 	$user->password = password_hash($data['password'], PASSWORD_DEFAULT); // поле пароля
+			 R::store($user); // Заполняем таблицу. Если ее нету она сама создается
+			 $_SESSION['logged_user'] = $user; // Добавляем юзера в сессию
+			 echo "<div style='color:green;'>Регистрация успешна</div><br>";
+			 header('Location: /project_startup/startUp/index.php'); // Перешли в index.php 
 		 	
 
 
-		}else{
+		}else{ // показать ошибки ввода
 			echo '<div style="color:red;">' . array_shift($errors) . '</div> <hr>';
 		}
 

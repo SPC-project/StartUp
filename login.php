@@ -1,29 +1,30 @@
 <?php
-    require "db.php";
-	$data = $_POST;
-	if( isset($data['do_login']) ){
-		$errors = array();
-		$user = R::findOne('users','login = ?',array($data['login']));
-		if( $user ){ 
-			//login is
-			if( password_verify($data['password'],$user->password) ){
-				//зашли
-				$_SESSION['logged_user'] = $user;
+    require "db.php"; //Подключаемся к БД
+	$data = $_POST; // Забираем все данные из ПОСТ(внизу форма POST запрос делает).(Зачем? Удобней писать.);
+	if( isset($data['do_login']) ){//Проверяем есть в запросе хоть что то
+		//если что то есть в запросе
+		$errors = array(); //Массив ошибок
+		$user = R::findOne('users','login = ?',array($data['login'])); //Вот тут формируется запрос к БД. в таблице Users, по login. Про функцию findOne почитать в документации
+		if( $user ){ // проверка есть ли такой пользователь 
+			//Юзер нашелся в БД
+			if( password_verify($data['password'],$user->password) ){//Проверка совпадений пароля.
+				//зашли	
+				$_SESSION['logged_user'] = $user; // добавили в сессиб
 				echo '<div style="color:green;"> Вы вошли</div> <hr>';
-				header('Location: /project_startup/startUp');
+				header('Location: /project_startup/startUp/index.php'); // Перешли в index.php 
 
-			}else{
+			}else{ // неправильный пароль
 				$errors[] = "Неправильно введет пароль";
 			}
-		}else{
+		}else{ // если нету то добавляем ошибку
 			$errors[] = 'Пользователя не существует';
 		}
 
-		if( !empty($errors) ){
+		if( !empty($errors) ){ // показываеться какая ошибка была
 			echo '<div style="color:red;">' . array_shift($errors) . '</div> <hr>';
 		}
 
-	}
+	}//Если ничего нету то ничего не меняем на странице
 
 
 ?>
