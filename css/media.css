@@ -7,34 +7,141 @@
 
 @media (max-width:1600px) {}
 
-@media (min-width:1024px) {}
-
-@media (max-width:1200px) {}
-
 
 /*--tablet layout--*/
 
 @media (min-width:768px) and (max-width:1023px) {}
 
+@media (max-width:1100px) {
+/*
+	body {
+		background-color: chartreuse;
+	}
+*/
+	main .main_block {
+		top: 39%;
+		left: 25%;
+		height: 60px;
+	}
+	main .main_block p {
+		font-size: 16px;
+		margin-bottom: 80px;
+	}
+	main .main_block h1 {
+		font-size: 50px;
+	}
+	main #front .a_btn {
+		padding: 13px 75px 13px 72px;
+		font-size: 14px;
+	}
+}
+
 @media (max-width:1023px) {
+/*
+	body {
+		background-color: aqua;
+	}
+*/
 	html {
 		font-size: 9px;
 	}
+	main {
+		max-height: 49vw;
+	}
+	main .main_block {
+		top: 48%;
+		left: 20%;
+		height: 60px;
+	}
+	/*main .main_block p {
+		font-size: 16px;
+		margin-bottom: 80px;
+	}
+	main .main_block h1 {
+		font-size: 50px;
+	}
+	main #front .a_btn {
+		padding: 13px 75px 13px 72px;
+		font-size: 14px;
+	}*/
 }
 
 
 /*mobile*/
 
 @media (max-width:767px) {
-	.container {
-		min-width: 100%;
+/*
+	body {
+		background-color: red;
 	}
+*/
+	main .main_block {
+		top: 40%;
+		left: 16%;
+		max-width: 70vw;
+		max-height: 5vw;
+	}
+	main .main_block p {
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+	main .main_block h1 {
+		font-size: 40px;
+	}
+	main #front .a_btn {
+		font-size: 13px;
+	}
+	/*.container {
+		min-width: 100%;
+	}*/
 }
 
 @media (max-width:575px) {
+/*
+	body {
+		background-color: blue;
+	}
+*/
 	html {
 		font-size: 7px;
 	}
+	main .main_block {
+		top: 28%;
+		left: 16%;
+	}
+	main .main_block p {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	main .main_block h1 {
+		font-size: 35px;
+	}
+	main #front .a_btn {
+		padding: 8px 42px 8px 42px;
+		font-size: 13px;
+	}
 }
 
-@media (max-width:374px) {}
+@media (max-width:374px) {
+/*
+	body {
+		background-color: gray;
+	}
+*/
+	main .main_block {
+		top: 28%;
+		left: 16%;
+	}
+	main .main_block p {
+		font-size: 8px;
+		margin-bottom: 0;
+	}
+	main .main_block h1 {
+		font-size: 20px;
+	}
+	main #front .a_btn {
+		margin-top: 0;
+		padding: 8px 42px 8px 42px;
+		font-size: 8px;
+	}
+}

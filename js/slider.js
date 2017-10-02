@@ -11,10 +11,14 @@ setTimeout(function tick() {
 		if (l == current)
 			imgs[l].classList.remove("display_none");
 		else imgs[l].classList.add("display_none");
-		console.log(imgs[l], imgs[l].classList);
+		/*console.log(imgs[l], imgs[l].classList);*/
 	}
 
 
 	current++;
 	timerId = setTimeout(tick, 4000);
 }, 4000);
+/*var h = document.getElementById("particles-js");
+window.onresize = function (e) {
+	document.getElementsByTagName("main")[0].style.height = h.offsetHeight + "px";}
+*/
