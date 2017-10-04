@@ -1,4 +1,3 @@
-
 <?php
     require "db.php"; // Подключение к БД
 	$data = $_POST; // Забираем из запроса данные
@@ -37,10 +36,12 @@
 		 	$user->login = $data['login']; //Добавляем поля
 		 	$user->email = $data['email']; //add поля
 		 	$user->password = password_hash($data['password'], PASSWORD_DEFAULT); // поле пароля
-			 R::store($user); // Заполняем таблицу. Если ее нету она сама создается
-			 $_SESSION['logged_user'] = $user; // Добавляем юзера в сессию
+			$user->level_access = 1;
+                        $user->is_verification = 0;
+			 R::store($user); // Заполняем таблицу. Если ее нету она сама создается			 
+			 mail($data['email'], "Подтвердение регестрации", 'www.drendoo.ho.ua/conf.php?login='.$user->login); 
 			 echo "<div style='color:green;'>Регистрация успешна</div><br>";
-			 header('Location: /project_startup/startUp/index.php'); // Перешли в index.php 
+			 header('Location: index.php'); // Перешли в index.php 
 		 	
 
 
