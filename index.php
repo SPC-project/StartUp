@@ -41,7 +41,8 @@
     					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
 							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; // Строчка где показывается login пользователя
 							echo '<a href="html/question.html">Questions</a>';
-							echo '<a href="logOut.php">Прыгнуть из окна</a>';//ссылка для выхода
+							echo '<a href="logOut.php">Прыгнуть из окна</a>';
+							echo '<a href="adminka/admin.php">Все для администрации</a>';//ссылка для выхода
 						}else{
 							echo "<a href='login.php'>LogIn</a>";
 							// Вход здесь!

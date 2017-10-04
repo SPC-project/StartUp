@@ -5,17 +5,19 @@
 		//если что то есть в запросе
 		$errors = array(); //Массив ошибок
 		$user = R::findOne('users','login = ?',array($data['login'])); //Вот тут формируется запрос к БД. в таблице Users, по login. Про функцию findOne почитать в документации
-		if( $user ){ // проверка есть ли такой пользователь 
+echo $user->is_verification;
+		if( $user){ // проверка есть ли такой пользователь 
 			//Юзер нашелся в БД
 			if( password_verify($data['password'],$user->password) ){//Проверка совпадений пароля.
-				//зашли	
+				if($user->is_verification==1) {//зашли	
 				$_SESSION['logged_user'] = $user; // добавили в сессиб
 				echo '<div style="color:green;"> Вы вошли</div> <hr>';
-				header('Location: /project_startup/startUp/index.php'); // Перешли в index.php 
+				header('Location: index.php'); // Перешли в index.php 
 
-			}else{ // неправильный пароль
+			} else { $errors[] = "Подтвердите свой аккаунт по электронной почте";}
+			} else { // неправильный пароль
 				$errors[] = "Неправильно введет пароль";
-			}
+					}
 		}else{ // если нету то добавляем ошибку
 			$errors[] = 'Пользователя не существует';
 		}
