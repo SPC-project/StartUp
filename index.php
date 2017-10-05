@@ -1,3 +1,6 @@
+<?php
+ 	require "db.php"; // Подключаем соеденение с БД.
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +40,7 @@
 			-->
 				<!--КОД PHP который взаимодействует с html. Пожалуйста запусти меня на локальном сервере-->
 				<?php
-    					require "db.php"; // Подключаем соеденение с БД.
+    					//require "db.php"; // Подключаем соеденение с БД.
     					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
 							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; 
 //							Строчка где показывается login пользователя
@@ -79,9 +82,32 @@
 		</div>
 	</main>
 
-	<section>
-		<h2>Darina's part</h2>
-	</section>
+	<!-------------     ABOUT     --------------->
+     <section id="eggs" >
+        <div class="container">
+            <div class="row text-center header-eggs">
+                <h2>How it works?</h2>
+            </div>
+            <div class = "row icons text-center">
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic1.png" alt="Interactive tests">
+                    <h3>Interactive tests</h3>
+                    <h5>Check the knowledge received through various interactive tasks.</h5>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic2.png" alt="">
+                    <h3>Forum</h3>
+                    <h5>Discuss the questions you are interested in with other students and teachers on the forum.</h5>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic3.png" alt="">
+                    <h3>Videolectures</h3>
+                    <h5>Watch the video lectures of the best teachers of the leading universities of Ukraine.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------     END  ABOUT     --------------->
 
 	<footer class="text-center">
 		<a href="#"><i class="fa fa-facebook"></i></a>

@@ -169,16 +169,27 @@ main {
 	height: 85vh;
 }
 
-section {
-	display: block;
-	height: 15vh;
-	background-color: bisque;
+
+section  {
+    padding-top: 3%;
+    font-family: "Comic Sans Ms";
 }
 
-header {
-	text-align: center;
-	color: black;
+.header-eggs h2 {
+    color: #363636;
+    font-family: "Comic Sans Ms";
 }
+
+.icons img {
+    width: 150px;
+}
+
+.icons {
+    margin-top: 3%;
+    font-family: "Comic Sans Ms";
+}
+
+
 
 footer h1 {
 	margin: 0;
