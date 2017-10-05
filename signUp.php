@@ -1,5 +1,13 @@
-
 <?php
+function generatePassword($length = 32){
+  $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ1234567890';
+  $numChars = strlen($chars);
+  $string = '';
+  for ($i = 0; $i < $length; $i++) {
+    $string .= substr($chars, rand(1, $numChars) - 1, 1);
+  }
+  return $string;
+}
     require "db.php"; // Подключение к БД
 	$data = $_POST; // Забираем из запроса данные
 	if( isset($data['do_signup']) ){//Проверяем есть ли что то
@@ -37,10 +45,13 @@
 		 	$user->login = $data['login']; //Добавляем поля
 		 	$user->email = $data['email']; //add поля
 		 	$user->password = password_hash($data['password'], PASSWORD_DEFAULT); // поле пароля
-			 R::store($user); // Заполняем таблицу. Если ее нету она сама создается
-			 $_SESSION['logged_user'] = $user; // Добавляем юзера в сессию
+			$user->level_access = 1;
+                        $user->is_verification = 0;
+$user->for_verification = generatePassword(32);
+			 R::store($user); // Заполняем таблицу. Если ее нету она сама создается			 
+			 mail($data['email'], "Подтвердение регестрации", 'www.drendoo.ho.ua/conf.php?login='.$user->for_verification); 
 			 echo "<div style='color:green;'>Регистрация успешна</div><br>";
-			 header('Location: /project_startup/startUp/index.php'); // Перешли в index.php 
+			 header('Location: index.php'); // Перешли в index.php 
 		 	
 
 
