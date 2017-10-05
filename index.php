@@ -1,13 +1,13 @@
 <?php
  	require "db.php"; // Подключаем соеденение с БД.
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Start page</title>
-	<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -26,14 +26,13 @@
 
 <body>
 
-
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-2">
 				<h1>Some logo</h1>
 			</div>
 			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
-				<!--Тоже самое (почти) на чистом html 
+			<!--Тоже самое (почти) на чистом html 
 			<a href='login.php'>LogIn</a>
 			<a href="signUp.php">SignIn</a>
 			<a href="html/question.html">Questions</a>
@@ -60,6 +59,9 @@
 		</div>
 		</div>
 
+
+			</nav>
+		</div> 
 	</header>
 
 
@@ -71,19 +73,23 @@
 			<img src="img/img_homepage/t4.jpg" class="display_none">
 			<img src="img/img_homepage/t5.jpg" class="display_none">
 			<img src="img/img_homepage/t6.jpg" class="display_none">
+			<img src="img/img_homepage/t7.jpg" class="display_none">
+
 		</div>
 		<div class="main_block" id="front">
 			<h1>Lorem ipsum dolor sit amet.</h1>
 			<p>Lorem ipsum dolor sit amet.</p>
+
 			<br>
 			<a href="html/question.html" class="text-center a_btn">
 				start here &rarr;
 			</a>
 		</div>
 	</main>
-
+	
+	
 	<!-------------     ABOUT     --------------->
-     <section id="eggs" >
+     <section id="eggs">
         <div class="container">
             <div class="row text-center header-eggs">
                 <h2>How it works?</h2>
