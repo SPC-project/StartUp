@@ -1,10 +1,13 @@
+<?php
+	require "db.php"; // Подключаем соеденение с БД.
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Start page</title>
-	<!--	<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -23,39 +26,38 @@
 
 <body>
 
-
 	<header class="container">
 		<div class="row">
 			<div class="col-xs-2">
 				<h1>Some logo</h1>
 			</div>
 			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
-				<!--Тоже самое (почти) на чистом html 
+			<!--Тоже самое (почти) на чистом html 
 			<a href='login.php'>LogIn</a>
 			<a href="signUp.php">SignIn</a>
 			<a href="html/question.html">Questions</a>
 			-->
-				<!--КОД PHP который взаимодействует с html. Пожалуйста запусти меня на локальном сервере-->
-				<?php
-    					require "db.php"; // Подключаем соеденение с БД.
-    					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
-							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; 
-//							Строчка где показывается login пользователя
-							echo '<a href="html/question.html">Questions</a>';
-							echo '<a href="logOut.php">Прыгнуть из окна</a>';//ссылка для выхода
-						}else{
-							echo "<a href='login.php'>LogIn</a>";
-							// Вход здесь!
-							echo '<a href="signUp.php">SignIn</a>';
-							// Регистрация тута!
-							echo '<a href="html/question.html">Questions</a>';
-						}
-					?>
-					<!--КОНЕЦ кода PHP -->
-			</nav>
-		</div>
-		</div>
+			
+		<!--КОД PHP который взаимодействует с html. Пожалуйста запусти меня на локальном сервере-->
 
+		<?php
+			//require "db.php"; // Подключаем соеденение с БД.
+			if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
+				echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; // Строчка где показывается login пользователя
+				echo '<a href="html/question.html">Questions</a>';
+				echo '<a href="logOut.php">Прыгнуть из окна</a>';//ссылка для выхода
+			}else{
+				echo "<a href='login.php'>LogIn</a>";
+				// Вход здесь!
+				echo '<a href="signUp.php">SignIn</a>';
+				// Регистрация тута!
+				echo '<a href="html/question.html">Questions</a>';
+			}
+		?> 
+		<!--КОНЕЦ кода PHP -->
+
+			</nav>
+		</div> 
 	</header>
 
 
@@ -67,20 +69,47 @@
 			<img src="img/img_homepage/t4.jpg" class="display_none">
 			<img src="img/img_homepage/t5.jpg" class="display_none">
 			<img src="img/img_homepage/t6.jpg" class="display_none">
+			<img src="img/img_homepage/t7.jpg" class="display_none">
+
 		</div>
 		<div class="main_block" id="front">
 			<h1>Lorem ipsum dolor sit amet.</h1>
 			<p>Lorem ipsum dolor sit amet.</p>
+
 			<br>
 			<a href="html/question.html" class="text-center a_btn">
 				start here &rarr;
 			</a>
 		</div>
 	</main>
-
-	<section>
-		<h2>Darina's part</h2>
-	</section>
+	
+	
+	<!-------------     ABOUT     --------------->
+     <section id="eggs" style= "font-family: 'Comic Sans Ms'" >
+        <div class="container">
+            <div class="row text-center header-eggs">
+                <h2>How it works?</h2>
+            </div>
+            <div class = "row icons text-center">
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic1.png" alt="Interactive tests">
+                    <h3>Interactive tests</h3>
+                    <h5>Check the knowledge received through various interactive tasks.</h5>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic2.png" alt="">
+                    <h3>Forum</h3>
+                    <h5>Discuss the questions you are interested in with other students and teachers on the forum.</h5>
+                </div>
+                <div class="col-sm-4">
+                    <img src="img/img_about/pic3.png" alt="">
+                    <h3>Videolectures</h3>
+                    <h5>Watch the video lectures of the best teachers of the leading universities of Ukraine.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------     END  ABOUT     --------------->
 
 	<footer class="text-center">
 		<a href="#"><i class="fa fa-facebook"></i></a>
