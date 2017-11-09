@@ -193,6 +193,8 @@ section  {
 	display: block;
 	height: 15vh;
 	background-color: bisque;*/
+    font-family: "Comic Sans Ms";
+
 }
 
 .header-eggs h2 {
@@ -229,6 +231,7 @@ section#subjects{
 /*
 .hovereffect img {
     width: 100%;
+
 }
 */
 
@@ -451,6 +454,17 @@ transition-delay:.2s;
   opacity: 0.1;
 }
 
+
+
+
+.icons img {
+    width: 150px;
+}
+
+.icons {
+    margin-top: 3%;
+    font-family: "Comic Sans Ms";
+}
 
 
 

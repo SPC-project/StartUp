@@ -3,8 +3,8 @@ require "../db.php";
     if( isset($_SESSION['logged_user']) ){
         if( $_SESSION['logged_user']->levelAccess == 3 ){
             echo "Привет Админ<br>";
-        }
-    }
+        } else header("Location = ./index.php");
+    } else header("Location = ./index.php");
 ?>
 
 <form action="adminAddQuestions.php" method="POST">
