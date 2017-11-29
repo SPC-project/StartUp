@@ -12,7 +12,7 @@ echo '<form action="adminAddQuestions.php" method="POST">';
 echo '<select name="category">';
 $categories = R::find("categories", "ORDER BY 'name' DESC", array());
 foreach ($categories as $c) {
-    echo "<option value ='" . $c->id. "'>" . $c->name . "</option>";
+    echo "<option value ='" . $c->id . "'>" . $c->name . "</option>";
 }
 
 echo "</select>";
