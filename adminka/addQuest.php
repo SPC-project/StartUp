@@ -40,7 +40,7 @@ if (isset($_POST['test'])) {
     foreach ($oneTest as $oT) {
         $amoungQuestNeed = $oT->amoung_questions;
     }
-    if ((int)$amoungQuestNeed > $amoungCurrentQuest) {
+    if ((int)$amoungQuestNeed > (int)$amoungCurrentQuest) {
 
         echo '<hr>';
         echo '<form action="addQuest.php" method="POST">';
