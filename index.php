@@ -28,6 +28,7 @@
 
 <nav class = "navbar navbar-default navbar-fixed-top">
 	<header class="container">
+
 	<!-- <div class = "header_Main"> -->
 		<div class="row ">
 			<!-- <div class="col-xs-2">
@@ -38,6 +39,13 @@
 				<a href = "/">
 <!--				    <img src="img/img_about/logo.png" alt="Logo of company">-->
                <h1>Some logo</h1>
+
+		<div class="row">
+			<div class="col-md-4 col-xs-6 col-sm-4 logo">
+				<!-- <h1>Some logo</h1> -->
+				<a href = "/">
+				    <img src="img/img_about/logo.png" alt="Logo of company">
+
                 </a>
 			</div>
 			<!-- <nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
@@ -52,21 +60,34 @@
 				<?php
     					//require "db.php"; // Подключаем соеденение с БД.
     					if(isset($_SESSION['logged_user']) ){ //Проверка сессии. Если не пустая тогда пользователь зашел.
-							echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; 
+							if ($_SESSION['logged_user']->name != '' && $_SESSION['logged_user']->surname != '')
+								echo "Авторизован. Привет ",  $_SESSION['logged_user']->name ," ",  $_SESSION['logged_user']->surname , "!"; 
+							else echo "Авторизован. Привет ",  $_SESSION['logged_user']->login , "!"; 
 //							Строчка где показывается login пользователя
 							echo '<a href="html/question.html">Questions</a>';
 							echo '<a href="logOut.php">Прыгнуть из окна</a>';
-							echo '<a href="adminka/admin.php">Все для администрации</a>';//ссылка для выхода
+							if($_SESSION['logged_user']->level_access == 3)echo '<a href="adminka/admin.php">Все для администрации</a>';//ссылка для выхода
+							else echo '<a href="cabinet.php">Личный кабинет</a>';//ссылка для выхода
+							
 						}else{
 							echo "<a href='login.php'>LogIn</a>";
 							// Вход здесь!
-							echo '<a href="signUp.php">SignIn</a>';
+							echo '<a href="signUp.php">SignUp</a>';
 							// Регистрация тута!
+
 							echo '<a href="#info_subj">Questions</a>';
 							echo '<a href="#info">About Us</a>';
 						}
 					?>
 					<!--КОНЕЦ кода PHP -->
+
+							echo '<a href="html/question.html">Questions</a>';echo '<a href="#info">About Us</a>';
+						}
+					?>
+					<!--КОНЕЦ кода PHP -->
+			</nav>
+		</div>
+
 
 
 			</nav>
@@ -97,6 +118,12 @@
 			</a>
 		</div>
 	</main>
+
+
+	<!-------------     ABOUT     --------------->
+    <a name = "info"></a>
+     <section id="eggs" >
+
 	
 
 	<!--===========   ABOUT   ================-->
@@ -217,8 +244,8 @@
             </div>
         </div>
     </section>
-    
-
+        
+   
 
 	<footer class="text-center">
 		<a href="#"><i class="fa fa-facebook"></i></a>

@@ -30,10 +30,10 @@
         
         }
     }else{
-        echo "У вас не хватает уровня доступа";
+        header("Location = ./index.php");
     }
 }else{
-    echo "Пожалуйста войдите на сайт";
+    header("Location = ./index.php");
 }
     
 ?>

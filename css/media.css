@@ -144,4 +144,29 @@
 		padding: 8px 42px 8px 42px;
 		font-size: 8px;
 	}
+
+}
+
+@media(min-width:0px) and (max-width:320px) {
+    img#new_logo {
+        width: 70px;
+    }
+    
+    .main_menu a{
+        font-size: 16px;
+    }
+    
+    .header-eggs h2 {
+        font-size: 16px;
+    }
+    .icons img {
+        width: 10px;
+    }
+    .icons h3 {
+        font-size: 16px;
+    }
+    .icons h5 {
+        font-size: 13px;
+    }
+    
 }
