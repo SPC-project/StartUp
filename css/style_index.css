@@ -14,6 +14,40 @@ header div h1 {
 header {
 	min-height: 15vh;
 }
+.header_Main{
+/*	width:920px;
+	height: 100px;
+	margin: 0px auto;
+	z-index: 0;*/
+	position:fixed;
+	top:0;
+	width:1000px;
+	z-index:1000;
+}
+
+.header_top {
+/*width:920px;
+  height: 100px;
+  background: url(../img/img_about/bg-header.png) no-repeat;
+  position: fixed;
+  z-index: 9999;*/
+  
+  height:85px;
+  width:1000px ;
+  background: url(../img/img_about/bg-header.png) no-repeat;
+  background-color: white;
+}
+
+/* Navbar */
+.navbar-default {
+    background-color: white;
+    border-color: #E7E7E7;
+    height: 100px;
+}
+
+
+
+
 
 header nav a:hover {
 	color: rgb(77, 77, 77);
@@ -87,6 +121,8 @@ header nav {
 }
 
 #particles-js {
+    margin-top: 100px;
+    
 	z-index: 0;
 	position: absolute;
 	width: 100%;
@@ -165,13 +201,21 @@ header nav {
 }
 
 main {
+/*    position: relative;*/
 	width: 100%;
 	height: 85vh;
 }
 
 
-section  {
-    padding-top: 3%;
+section#eggs  {
+    padding-top: 10%;
+    padding-bottom: 3.5%;
+    font-family: "Comic Sans Ms";
+    background-color: #F5FFFA;
+    /*opacity: 0.2;
+	display: block;
+	height: 15vh;
+	background-color: bisque;*/
     font-family: "Comic Sans Ms";
 }
 
@@ -189,6 +233,135 @@ section  {
     font-family: "Comic Sans Ms";
 }
 
+/*====================    MATERIALS_BLOCKS  =======================*/
+
+section#subjects  {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    font-family: "Comic Sans Ms";
+}
+
+.header-subj h2 {
+    color: #363636;
+    font-family: "Comic Sans Ms";
+    margin-bottom: 50px;
+}
+
+.products {
+	list-style: none;
+	margin: 0 -10px 0 10px;
+	padding: 0;
+}
+
+.product-wrapper {
+	display: block;
+	width: 100%;
+	float: left;
+	transition: width .2s;
+}
+
+.product {
+	display: block;
+	border: 1px solid/outset #00ccff;
+	border-radius: 3px;
+	position: relati1ve;
+	background: white;
+	margin: 0 20px 20px 0;
+	text-decoration: none;
+	z-index: 0;
+}
+
+.product:hover {
+	z-index: 1;
+}
+
+/* PRODUCT IMAGE */
+
+.product-photo {
+	position: relative;
+	padding-bottom: 100%;
+	overflow: hidden;
+}
+
+.product-photo img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	transition: transform .4s ease-out;
+
+}
+
+
+.product:hover .product-photo img {
+	transform: scale(1.05);
+}
+
+
+.product-preview {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	margin: auto;
+	display: inline-block;
+	transition: opacity, transform .2s ease-out;
+	transform: translateY(2em);
+	opacity: 0;
+}
+
+.product:hover .product-preview {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+@media only screen and (min-width: 450px) {
+	.product-wrapper {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.product-wrapper {
+		width: 33.333%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.product-wrapper {
+		width: 25%;
+	}
+}
+
+
+.button {
+	display: inline-block;
+	width: 100%;
+	background: #00b8e6;
+	color: #fff;
+	font-family: "Comic Sans Ms", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	border: 0;
+	padding: 10px 0;
+	border-radius: 20px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+	box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+	cursor: pointer;
+	text-decoration: none;
+    
+}
+
+section#About_team  {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    font-family: "Comic Sans Ms";
+}
 
 
 footer h1 {

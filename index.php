@@ -26,12 +26,23 @@
 
 <body>
 
+<nav class = "navbar navbar-default navbar-fixed-top">
 	<header class="container">
-		<div class="row">
-			<div class="col-xs-2">
+	<!-- <div class = "header_Main"> -->
+		<div class="row ">
+			<!-- <div class="col-xs-2">
 				<h1>Some logo</h1>
+			</div> -->
+			<div class=" col-md-4 logo">
+				<!-- <h1>Some logo</h1> -->
+				<a href = "/">
+<!--				    <img src="img/img_about/logo.png" alt="Logo of company">-->
+               <h1>Some logo</h1>
+                </a>
 			</div>
-			<nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
+			<!-- <nav class="col-lg-8 col-lg-offset-2 col-sm-10 ">
+ -->
+			<nav class="col-md-8 ">
 			<!--Тоже самое (почти) на чистом html 
 			<a href='login.php'>LogIn</a>
 			<a href="signUp.php">SignIn</a>
@@ -51,18 +62,18 @@
 							// Вход здесь!
 							echo '<a href="signUp.php">SignIn</a>';
 							// Регистрация тута!
-							echo '<a href="html/question.html">Questions</a>';
+							echo '<a href="#info_subj">Questions</a>';
+							echo '<a href="#info">About Us</a>';
 						}
 					?>
 					<!--КОНЕЦ кода PHP -->
-			</nav>
-		</div>
-		</div>
 
 
 			</nav>
-		</div> 
+		<!-- </div>  -->
+		</div>
 	</header>
+	</nav>
 
 
 	<main>
@@ -77,18 +88,20 @@
 
 		</div>
 		<div class="main_block" id="front">
-			<h1>Lorem ipsum dolor sit amet.</h1>
-			<p>Lorem ipsum dolor sit amet.</p>
+			<h1>You are welcome! :)</h1>
+			<p>Check your knowledges.</p>
 
 			<br>
 			<a href="html/question.html" class="text-center a_btn">
-				start here &rarr;
+				Random test &rarr;
 			</a>
 		</div>
 	</main>
 	
-	
-	<!-------------     ABOUT     --------------->
+
+	<!--===========   ABOUT   ================-->
+	<a name = "info"></a>
+
      <section id="eggs">
         <div class="container">
             <div class="row text-center header-eggs">
@@ -102,18 +115,110 @@
                 </div>
                 <div class="col-sm-4">
                     <img src="img/img_about/pic2.png" alt="">
-                    <h3>Forum</h3>
-                    <h5>Discuss the questions you are interested in with other students and teachers on the forum.</h5>
+                    <h3>Lorem</h3>
+                    <h5> dolor sit amet, consectetur adipisicing elit. Debitis architecto porro dolorem placeat ducimus possimus cumque recusandae.</h5>
                 </div>
                 <div class="col-sm-4">
                     <img src="img/img_about/pic3.png" alt="">
-                    <h3>Videolectures</h3>
-                    <h5>Watch the video lectures of the best teachers of the leading universities of Ukraine.</h5>
+                    <h3>Lorem</h3>
+                    <h5>dolor sit amet, consectetur adipisicing elit. Debitis architecto porro dolorem placeat ducimus possimus cumque recusandae.</h5>
                 </div>
             </div>
         </div>
     </section>
-    <!-------------     END  ABOUT     --------------->
+
+
+    <!--==============     MATERIALS    ==============-->
+    <a name = "info_subj"></a>
+    <br><br>
+    <section id="subjects">
+            <div class="row text-center header-subj">
+                <h2>Choose topic</h2>
+            </div>
+			<ul class="products ">
+				<li class="product-wrapper">
+					<a href="html/question.html" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/math.jpg" alt="">
+							<div class="product-preview"><span class="button">Math</span></div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/programming.jpg" alt="">
+							<div class="product-preview"><span class="button">Programming</span></div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/geography.jpg" alt="">
+							<div class="product-preview"><span class="button">Geography</span></div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/english.jpg" alt="">
+							<div class="product-preview"><span class="button">English</span></div>
+						</div>
+					</a>
+				</li>
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/history.png" alt="">
+                            <div class="product-preview"><span class="button">History</span></div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/math3.jpg" alt="">
+							<div class="product-preview"><span class="button">Math</span></div>
+						</div>
+					</a>
+				</li>
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/programming.jpg" alt="">
+							<div class="product-preview"><span class="button">Programming</span></div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="product-wrapper">
+					<a href="" class="product">
+						<div class="product-photo">
+							<img src="/img/img_about/math2.jpg" alt="">
+							<div class="product-preview"><span class="button">Math</span></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+    </section>
+
+
+
+ <section id="About_team">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Smth else</h2>
+            </div>
+        </div>
+    </section>
+    
+
 
 	<footer class="text-center">
 		<a href="#"><i class="fa fa-facebook"></i></a>
