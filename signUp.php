@@ -1,3 +1,23 @@
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/media.css">
+<link rel="stylesheet" href="css/style_common.css">
+<link rel="stylesheet" href="css/style_index.css">
+<style>
+    body {
+        background-color: #e8e7e7;
+        font-family: 'Open Sans','Helvetica','Arial';
+        font-size: 14px;
+        color: #424242;
+    }
+    h3{
+        text-align: center;
+    }
+</style>
 <?php
 function generatePassword($length = 32){
   $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWYZ1234567890';
@@ -65,30 +85,55 @@ $user->for_verification = generatePassword(32);
 
 	
 ?>
-  <form action='signUp.php' method="POST">
-  <p>
-  	<p><strong>Введите логин </strong></p>
-  	<input type='text' name="login" value ="<?php echo @$data['login'];?>">
-  </p>
 
-  <p>
-  	<p><strong>Введите email </strong></p>
-  	<input type='email' name="email" value ="<?php echo @$data['email'];?>">
-  </p>
- 
-  <p>
-  	<p><strong>Введите пароль </strong></p>
-  	<input type='password' name="password">
-  </p>
-  
-  <p>
-  	<p><strong>Введите пароль второй раз </strong></p>
-  	<input type='password' name="password_2">
-  </p>
+<form class="form-horizontal" action='signUp.php' method="POST">
+    <fieldset>
+        <br><br><br><br><br><br>
 
-  <p>
-  	<button type="submit" name="do_signup"> Зарегестрироватся </button>
-  </p>
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <h3 align="centr">Sign Up</h3>
+                <br>
+                <label for="inputLogin">Login</label>
+                <input type="text"  name="login" class="form-control" id="inputLogin" placeholder="Pick a login" value="<?php echo @$data['login'];?>">
+            </div>
+        </div>
 
-  </form>
-  <a href="index.php">Вернутся на главную</a>
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <label for="login">Email</label>
+                <input type="email" name="email"  class="form-control" id="E_mail_address" placeholder="you@example.com" value="<?php echo @$data['email'];?>">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <label for="login">Password</label>
+                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Creat you password">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <input type="password" name="password_2" class="form-control" id="Repeat_password" placeholder="Repeat your password">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <button type="submit" name="do_signup" class="btn btn-success btn-block" >Sign up</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-4 col-xs-3">
+                <a href="index.php"><button type="button" class="btn btn-info btn-link btn-block" ><span class="glyphicon glyphicon-arrow-left"></span>Back to home</button></a>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
+

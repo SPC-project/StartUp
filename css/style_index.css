@@ -11,27 +11,14 @@ header div h1 {
 	margin-top: 35px;
 }
 
-.logo a, .logo img {
-    border: none;
-}
-a img {
-    display:block;
-}
-img {
-    width: 150px;
-    margin-top: 15px;
-    height: auto!important;
-}
-
-
 header {
 	min-height: 15vh;
 }
 .header_Main{
-/*	width:920px;
-	height: 100px;
-	margin: 0px auto;
-	z-index: 0;*/
+	/*	width:920px;
+        height: 100px;
+        margin: 0px auto;
+        z-index: 0;*/
 	position:fixed;
 	top:0;
 	width:1000px;
@@ -39,23 +26,23 @@ header {
 }
 
 .header_top {
-/*width:920px;
-  height: 100px;
-  background: url(../img/img_about/bg-header.png) no-repeat;
-  position: fixed;
-  z-index: 9999;*/
-  
-  height:85px;
-  width:1000px ;
-  background: url(../img/img_about/bg-header.png) no-repeat;
-  background-color: white;
+	/*width:920px;
+      height: 100px;
+      background: url(../img/img_about/bg-header.png) no-repeat;
+      position: fixed;
+      z-index: 9999;*/
+
+	height:85px;
+	width:1000px ;
+	background: url(../img/img_about/bg-header.png) no-repeat;
+	background-color: white;
 }
 
 /* Navbar */
 .navbar-default {
-    background-color: white;
-    border-color: #E7E7E7;
-    height: 100px;
+	background-color: white;
+	border-color: #E7E7E7;
+	height: 100px;
 }
 
 
@@ -75,8 +62,7 @@ header nav a {
 }
 
 header nav {
-	margin-top: -45px;
-    margin-bottom: 10px;
+	margin-top: 40px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -135,8 +121,8 @@ header nav {
 }
 
 #particles-js {
-    margin-top: 100px;
-    
+	margin-top: 100px;
+
 	z-index: 0;
 	position: absolute;
 	width: 100%;
@@ -215,51 +201,50 @@ header nav {
 }
 
 main {
-/*    position: relative;*/
+	/*    position: relative;*/
 	width: 100%;
 	height: 85vh;
 }
 
 
 section#eggs  {
-    padding-top: 10%;
-    padding-bottom: 3.5%;
-    font-family: "Comic Sans Ms";
-    background-color: #F5FFFA;
-    /*opacity: 0.2;
-	display: block;
-	height: 15vh;
-	background-color: bisque;*/
-    font-family: "Comic Sans Ms";
-
+	padding-top: 10%;
+	padding-bottom: 3.5%;
+	font-family: "Comic Sans Ms";
+	background-color: #F5FFFA;
+	/*opacity: 0.2;
+    display: block;
+    height: 15vh;
+    background-color: bisque;*/
+	font-family: "Comic Sans Ms";
 }
 
 .header-eggs h2 {
-    color: #363636;
-    font-family: "Comic Sans Ms";
+	color: #363636;
+	font-family: "Comic Sans Ms";
 }
 
 .icons img {
-    width: 150px;
+	width: 150px;
 }
 
 .icons {
-    margin-top: 3%;
-    font-family: "Comic Sans Ms";
+	margin-top: 3%;
+	font-family: "Comic Sans Ms";
 }
 
 /*====================    MATERIALS_BLOCKS  =======================*/
 
 section#subjects  {
-    padding-top: 2%;
-    padding-bottom: 3%;
-    font-family: "Comic Sans Ms";
+	padding-top: 2%;
+	padding-bottom: 3%;
+	font-family: "Comic Sans Ms";
 }
 
 .header-subj h2 {
-    color: #363636;
-    font-family: "Comic Sans Ms";
-    margin-bottom: 50px;
+	color: #363636;
+	font-family: "Comic Sans Ms";
+	margin-bottom: 50px;
 }
 
 .products {
@@ -369,14 +354,15 @@ section#subjects  {
 	box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
 	cursor: pointer;
 	text-decoration: none;
-    
+
 }
 
 section#About_team  {
-    padding-top: 2%;
-    padding-bottom: 3%;
-    font-family: "Comic Sans Ms";
+	padding-top: 2%;
+	padding-bottom: 3%;
+	font-family: "Comic Sans Ms";
 }
+
 
 footer h1 {
 	margin: 0;
