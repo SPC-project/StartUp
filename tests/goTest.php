@@ -79,7 +79,6 @@ $dataQuestions = R::find('questions', "test_id = ?", array($_POST['test']));
     var number3 = [];
     var number4 = [];
     var answer = [];
-    alert(questions.length);
     for(var i=0;i<questions.length;i++){
         var res = severalRandom(0,3,4);
         console.log(res);

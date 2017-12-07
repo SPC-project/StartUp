@@ -56,7 +56,10 @@ require "db.php"; // Подключаем соеденение с БД.
 //							Строчка где показывается login пользователя
                     echo '<a href="html/chooseQuestion.php">Questions</a>';
                     echo '<a href="logOut.php">Прыгнуть из окна</a>';
+                if( $_SESSION['logged_user']->level_access == 3 ) {
                     echo '<a href="adminka/admin.php">Все для администрации</a>';//ссылка для выхода
+                }
+                echo '<a href="#info">About Us</a>';
                 }else{
                     echo "<a href='login.php'>LogIn</a>";
                     // Вход здесь!
