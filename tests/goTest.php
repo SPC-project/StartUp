@@ -241,19 +241,19 @@ $dataQuestions = R::find('questions', "test_id = ?", array($_POST['test']));
 
         <center>
             <form action="goTest.php">
-            <p id="question"></p>
-            <div class = "btn_check">
-            <button onclick="check(0)" class="myButton" id="option1"></button>
+                <p id="question"></p>
+                <div class = "btn_check">
+                    <button onclick="check(0)" class="myButton" id="option1"></button>
 
-            <button onclick="check(1)" class="myButton" id="option2"></button>
-            <br>
+                    <button onclick="check(1)" class="myButton" id="option2"></button>
+                    <br>
 
-            <button onclick="check(2)" class="myButton" id="option3"></button>
-            <br>
+                    <button onclick="check(2)" class="myButton" id="option3"></button>
+                    <br>
 
-            <button onclick="check(3)" class="myButton" id="option4"></button>
-            <br>
-            </div>
+                    <button onclick="check(3)" class="myButton" id="option4"></button>
+                    <br>
+                </div>
             </form>
         </center>
 
@@ -263,11 +263,11 @@ $dataQuestions = R::find('questions', "test_id = ?", array($_POST['test']));
 
 <br><br>
 <center>
-       <button id="start" class="myButton" onclick="check(4)">Приступить к тесту</button>
-<!--    <div class="wrap">-->
-<!--        <button id="start"  class="clicker fast"  onclick="check(4)">Start</button>-->
-<!--        <div class="circle angled" ></div>-->
-<!--    </div>-->
+    <button id="start" class="myButton" onclick="check(4)">Приступить к тесту</button>
+    <!--    <div class="wrap">-->
+    <!--        <button id="start"  class="clicker fast"  onclick="check(4)">Start</button>-->
+    <!--        <div class="circle angled" ></div>-->
+    <!--    </div>-->
 
     <script type="text/javascript"> var curent_url = document.URL;
         document.write("<a id='end' style='display: none;' class='myButton' href='" + curent_url + "'>Начать сначала</a>"); </script>
