@@ -109,7 +109,6 @@ require "db.php"; // Подключаем соеденение с БД.
     <div class="container ">
         <div class="row text-center header-eggs">
             <h2>How it works?</h2>
-            <a href="startDB.php">Создать БД</a>
         </div>
          <div class = "row  icons text-center">
             <div class="col-sm-4 wow fadeInUp" data-wow-delay = "0.2s">
