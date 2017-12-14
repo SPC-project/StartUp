@@ -51,6 +51,19 @@ if (isset($data['do_login'])) {//Проверяем есть в запросе �
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+        body {
+            background-color: #e8e7e7;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 14px;
+            color: #424242;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -64,7 +77,7 @@ if (isset($data['do_login'])) {//Проверяем есть в запросе �
             <div class="col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-md-3 col-sm-3 col-xs-3">
                 <h3 align="center">Sign In</h3>
                 <br>
-                <label for="login">Login or email address</label>
+                <label for="login">Login</label>
                 <input type="text" class="form-control" id="input_Login_or_email" name="login" placeholder="Pick a login or email address">
             </div>
         </div>
