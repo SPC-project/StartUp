@@ -47,10 +47,8 @@ $categories = R::find("categories","ORDER BY 'name' DESC", array());
 echo "<pre>";
 echo print_r($categories);
 echo "</pre>";
-$i=1;
 foreach ($categories as $c){
-    echo "<option value ='" . $i. "'>" . $c->name . "</option>";
-    $i++;
+    echo "<option value ='" . $c->id. "'>" . $c->name . "</option>";
 } 
 
 echo "</select>";
